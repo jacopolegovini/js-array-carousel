@@ -39,17 +39,17 @@ for (let i = 0; i < thumbnailsMd.length; i++) {
 }
 
 
-
 // Prendiamo gli elementi del DOM creati col ciclo for
 const imgElement = document.querySelectorAll('.carousel-photo img');
-const thumbElement = document.querySelectorAll('.thumbnails-photo img')
+const thumbElement = document.querySelectorAll('.thumbnails-photo img');
+const thumbMdElement = document.querySelectorAll('.thumbnails-photo-md-element');
 
 
 // Rendiamo visibile la prima img
 let currentIndex = 0;
 imgElement[currentIndex].classList.add('active');
 thumbElement[currentIndex].classList.add('focus');
-
+thumbMdElement[currentIndex].classList.add('focus-md');
 
 
 // Arrow left & right
@@ -57,6 +57,7 @@ arrowRightElement.addEventListener('click', function(){
     
     imgElement[currentIndex].classList.remove('active');
     thumbElement[currentIndex].classList.remove('focus');
+    thumbMdElement[currentIndex].classList.remove('focus-md');
 
     
     currentIndex ++;
@@ -68,6 +69,7 @@ arrowRightElement.addEventListener('click', function(){
 
     imgElement[currentIndex].classList.add('active');
     thumbElement[currentIndex].classList.add('focus');
+    thumbMdElement[currentIndex].classList.add('focus-md');
 
 })
 
@@ -75,6 +77,7 @@ arrowLeftElement.addEventListener('click', function(){
     
     imgElement[currentIndex].classList.remove('active');
     thumbElement[currentIndex].classList.remove('focus');
+    thumbMdElement[currentIndex].classList.remove('focus-md');
     
     currentIndex --;
 
@@ -85,5 +88,6 @@ arrowLeftElement.addEventListener('click', function(){
 
     imgElement[currentIndex].classList.add('active');
     thumbElement[currentIndex].classList.add('focus');
+    thumbMdElement[currentIndex].classList.add('focus-md');
 
 })
