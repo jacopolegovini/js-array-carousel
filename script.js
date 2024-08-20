@@ -4,7 +4,6 @@ const arrowLeftElement = document.querySelector('.fa-arrow-left');
 const arrowRightElement = document.querySelector('.fa-arrow-right');
 
 
-
 // Creazione variabili
 const imgs = ['img/01.webp', 'img/02.webp', 'img/03.webp', 'img/04.webp', 'img/05.webp'];
 let htmlElement = '';
@@ -34,6 +33,7 @@ arrowRightElement.addEventListener('click', function(){
     
     currentIndex ++;
 
+    // Loop
     if (currentIndex === imgs.length) {
         currentIndex = 0;
     } 
@@ -48,6 +48,7 @@ arrowLeftElement.addEventListener('click', function(){
     
     currentIndex --;
 
+    // Loop
     if (currentIndex < 0) {
         currentIndex = imgs.length - 1;
     } 

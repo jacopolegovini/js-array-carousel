@@ -1,9 +1,8 @@
 /* General */
 
 img {
-    width: 50%;
+    height: 100%;
     display: none;
-    
 }
 
 h1 {
@@ -25,15 +24,26 @@ h1 {
 /* Carosello */
 
 .container-carousel {
-    height: 400px;
+    height: 600px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .carousel-photo {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .fa-solid {
     cursor: pointer;
+    font-size: 2rem;
+}
+
+.fa-arrow-left {
+
 }
