@@ -1,7 +1,8 @@
 /* General */
 
 img {
-    height: 100%;
+    width: 450px;
+    object-fit: contain;
     display: none;
 }
 
@@ -25,7 +26,6 @@ h1 {
 
 .container-carousel {
     height: 600px;
-    
     display: flex;
     justify-content: center;
     align-items: center;
