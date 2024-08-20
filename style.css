@@ -21,6 +21,13 @@ h1 {
     display: block;
 }
 
+.card {
+    background-color: aliceblue;
+    border-radius: 30px;
+    height: 750px;
+    width: 600px;
+    margin: 0 auto;
+}
 
 /* Carosello */
 
@@ -61,7 +68,7 @@ h1 {
 
 .thumbnails-photo img {
     display: block;
-    width: 19%;
+    width: 10%;
     opacity: 0.5;
 }
 

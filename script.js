@@ -91,3 +91,17 @@ arrowLeftElement.addEventListener('click', function(){
     thumbMdElement[currentIndex].classList.add('focus-md');
 
 })
+
+
+for (let i = 0; i < imgElement.length; i++) {
+    const thumbnailElement = thumbElement[i];
+    thumbnailElement.addEventListener('click', function(){
+        imgElement[currentIndex].classList.remove('active');
+        thumbElement[currentIndex].classList.remove('focus');
+        
+        currentIndex = i;
+
+        imgElement[currentIndex].classList.add('active');
+        thumbElement[currentIndex].classList.add('focus');
+    });
+}

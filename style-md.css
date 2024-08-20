@@ -1,4 +1,12 @@
 @media screen and (max-width: 768px) {
+    .card {
+        background-color: aliceblue;
+        border-radius: 30px;
+        height: 600px;
+        width: 600px;
+        margin: 0 auto;
+    }
+    
     .thumbnails-photo {
         display: none
     }
