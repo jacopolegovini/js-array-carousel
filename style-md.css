@@ -1,0 +1,22 @@
+@media screen and (max-width: 768px) {
+    .thumbnails-photo {
+        display: none
+    }
+    
+    .thumbnails-photo-md {
+        position: absolute;
+        top: 90%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .thumbnails-photo-md-element {
+        flex-basis: 30px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: space-around;
+    }
+}

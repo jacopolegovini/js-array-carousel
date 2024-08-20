@@ -4,6 +4,7 @@ const carouselElement = document.querySelector('.carousel-photo');
 const arrowLeftElement = document.querySelector('.fa-arrow-left');
 const arrowRightElement = document.querySelector('.fa-arrow-right');
 const thumbnailsElement = document.querySelector('.thumbnails-photo');
+const thumbnailsMdElement = document.querySelector('.thumbnails-photo-md')
 
 
 // Creazione variabili
@@ -12,6 +13,9 @@ let htmlElement = '';
 
 const thumbnails = [...imgs]
 let htmlThumbElement = '';
+
+const thumbnailsMd = ['', '', '', '', '',];
+let htmlThumbMdElement = '';
 
 
 // Costruzione dinamica della stringa nel DOM - Carousel
@@ -27,6 +31,13 @@ for (let i = 0; i < thumbnails.length; i++) {
     htmlThumbElement += `<img src="${thumbnail}" alt="img-${i + 1}">`
 }
 thumbnailsElement.innerHTML = htmlThumbElement;
+
+// Costruzione dinamica della stringa nel DOM - Thumnails-md
+for (let i = 0; i < thumbnailsMd.length; i++) {
+    htmlThumbMdElement += `<div class="thumbnails-photo-md-element"></div>`;
+    thumbnailsMdElement.innerHTML = htmlThumbMdElement;
+}
+
 
 
 // Prendiamo gli elementi del DOM creati col ciclo for
