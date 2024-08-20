@@ -3,34 +3,50 @@
 const carouselElement = document.querySelector('.carousel-photo');
 const arrowLeftElement = document.querySelector('.fa-arrow-left');
 const arrowRightElement = document.querySelector('.fa-arrow-right');
+const thumbnailsElement = document.querySelector('.thumbnails-photo');
 
 
 // Creazione variabili
 const imgs = ['img/01.webp', 'img/02.webp', 'img/03.webp', 'img/04.webp', 'img/05.webp'];
 let htmlElement = '';
 
+const thumbnails = [...imgs]
+let htmlThumbElement = '';
 
-// Costruzione dinamica della stringa nel DOM
+
+// Costruzione dinamica della stringa nel DOM - Carousel
 for (let i = 0; i < imgs.length; i++) {
     const img = imgs[i];
     htmlElement += `<img src="${img}" alt="img-${i + 1}">`
 }
 carouselElement.innerHTML = htmlElement;
 
+// Costruzione dinamica della stringa nel DOM - Thumnails
+for (let i = 0; i < thumbnails.length; i++) {
+    const thumbnail = thumbnails[i];
+    htmlThumbElement += `<img src="${thumbnail}" alt="img-${i + 1}">`
+}
+thumbnailsElement.innerHTML = htmlThumbElement;
+
 
 // Prendiamo gli elementi del DOM creati col ciclo for
 const imgElement = document.querySelectorAll('.carousel-photo img');
+const thumbElement = document.querySelectorAll('.thumbnails-photo img')
 
 
 // Rendiamo visibile la prima img
 let currentIndex = 0;
 imgElement[currentIndex].classList.add('active');
+thumbElement[currentIndex].classList.add('focus');
+
 
 
 // Arrow left & right
 arrowRightElement.addEventListener('click', function(){
     
     imgElement[currentIndex].classList.remove('active');
+    thumbElement[currentIndex].classList.remove('focus');
+
     
     currentIndex ++;
 
@@ -40,12 +56,14 @@ arrowRightElement.addEventListener('click', function(){
     } 
 
     imgElement[currentIndex].classList.add('active');
+    thumbElement[currentIndex].classList.add('focus');
 
 })
 
 arrowLeftElement.addEventListener('click', function(){
     
     imgElement[currentIndex].classList.remove('active');
+    thumbElement[currentIndex].classList.remove('focus');
     
     currentIndex --;
 
@@ -55,23 +73,6 @@ arrowLeftElement.addEventListener('click', function(){
     } 
 
     imgElement[currentIndex].classList.add('active');
+    thumbElement[currentIndex].classList.add('focus');
 
 })
-
-
-// ** Thumbnails
-// Prendiamo gli elementi dal DOM
-const thumbnailsElement = document.querySelector('.thumbnails-photo');
-
-// Variabili
-const thumbnails = [...imgs]
-let htmlThumbElement = '';
-
-
-// Costruzione dinamica della stringa nel DOM
-for (let i = 0; i < thumbnails.length; i++) {
-    const thumbnail = thumbnails[i];
-    htmlThumbElement += `<img src="${thumbnail}" alt="img-${i + 1}">`
-}
-thumbnailsElement.innerHTML = htmlThumbElement;
-
