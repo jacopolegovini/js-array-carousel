@@ -1,0 +1,35 @@
+/* General */
+
+img {
+    width: 50%;
+    display: none;
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+/* Utilities */
+
+.active {
+    display: block;
+}
+
+
+/* Carosello */
+
+.container-carousel {
+    height: 400px;
+}
+
+.carousel-photo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
