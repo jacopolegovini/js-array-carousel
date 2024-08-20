@@ -34,6 +34,24 @@ arrowRightElement.addEventListener('click', function(){
     
     currentIndex ++;
 
+    if (currentIndex === imgs.length) {
+        currentIndex = 0;
+    } 
+
+    imgElement[currentIndex].classList.add('active');
+
+})
+
+arrowLeftElement.addEventListener('click', function(){
+    
+    imgElement[currentIndex].classList.remove('active');
+    
+    currentIndex --;
+
+    if (currentIndex < 0) {
+        currentIndex = imgs.length - 1;
+    } 
+
     imgElement[currentIndex].classList.add('active');
 
 })
