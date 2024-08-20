@@ -1,3 +1,4 @@
+// ** Carousel
 // Prendiamo gli elementi dal DOM
 const carouselElement = document.querySelector('.carousel-photo');
 const arrowLeftElement = document.querySelector('.fa-arrow-left');
@@ -56,3 +57,21 @@ arrowLeftElement.addEventListener('click', function(){
     imgElement[currentIndex].classList.add('active');
 
 })
+
+
+// ** Thumbnails
+// Prendiamo gli elementi dal DOM
+const thumbnailsElement = document.querySelector('.thumbnails-photo');
+
+// Variabili
+const thumbnails = [...imgs]
+let htmlThumbElement = '';
+
+
+// Costruzione dinamica della stringa nel DOM
+for (let i = 0; i < thumbnails.length; i++) {
+    const thumbnail = thumbnails[i];
+    htmlThumbElement += `<img src="${thumbnail}" alt="img-${i + 1}">`
+}
+thumbnailsElement.innerHTML = htmlThumbElement;
+

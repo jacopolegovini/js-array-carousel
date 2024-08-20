@@ -44,6 +44,21 @@ h1 {
     font-size: 2rem;
 }
 
-.fa-arrow-left {
 
+/* Thumbnails */
+
+.container-thumbnails {
+    margin-top: 20px;
+}
+
+.thumbnails-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.thumbnails-photo img {
+    display: block;
+    width: 19%;
 }
